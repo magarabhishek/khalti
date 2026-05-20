@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>eSewa Registration — Demo</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<main class="card" role="main">
+			<h1>eSewa Registration (Demo)</h1>
+			<p class="lead">Create an account to practice form handling. This is a client-side demo only.</p>
+
+			<div id="error" style="display:none" class="error" role="alert"></div>
+
+			<form id="regForm" novalidate>
+				<label for="fullname">Full name</label>
+				<input id="fullname" name="fullname" type="text" placeholder="Your full name" required />
+
+				<label for="email">Email</label>
+				<input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+				<div class="row">
+					<div>
+						<label for="mobile">Mobile number</label>
+						<input id="mobile" name="mobile" type="text" placeholder="98XXXXXXXX" required />
+					</div>
+					<div>
+						<label for="amount">Initial top-up (optional)</label>
+						<input id="amount" name="amount" type="text" placeholder="e.g., 500" />
+					</div>
+				</div>
+
+				<label for="address">Address</label>
+				<textarea id="address" name="address" placeholder="Optional address"></textarea>
+
+				<div class="row">
+					<div>
+						<label for="password">Password</label>
+						<input id="password" name="password" type="password" placeholder="Choose a password" required />
+					</div>
+					<div>
+						<label for="confirm">Confirm password</label>
+						<input id="confirm" name="confirm" type="password" placeholder="Repeat password" required />
+					</div>
+				</div>
+
+				<div style="margin-top:12px;display:flex;align-items:center;gap:8px">
+					<input id="terms" type="checkbox" />
+					<label for="terms" class="muted">I agree to the terms (demo)</label>
+				</div>
+
+				<div class="actions">
+					<span class="note">All fields marked required are for demo only.</span>
+					<button type="submit">Register</button>
+				</div>
+			</form>
+		</main>
+
+		<script>
+			const form = document.getElementById('regForm');
+			const err = document.getElementById('error');
+
+			function showError(msg){
+				err.style.display = msg ? 'block' : 'none';
+				err.textContent = msg || '';
+			}
+
+			function isEmail(v){
+				return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+			}
+
+			form.addEventListener('submit', (e)=>{
+				e.preventDefault();
+				showError('');
+
+				const fullname = form.fullname.value.trim();
+				const email = form.email.value.trim();
+				const mobile = form.mobile.value.replace(/\D/g,'');
+				const password = form.password.value;
+				const confirm = form.confirm.value;
+				const terms = document.getElementById('terms').checked;
+
+				if(!fullname) return showError('Please enter your full name.');
+				if(!email || !isEmail(email)) return showError('Please enter a valid email.');
+				if(!mobile || mobile.length < 9) return showError('Please enter a valid mobile number.');
+				if(password.length < 6) return showError('Password must be at least 6 characters.');
+				if(password !== confirm) return showError('Passwords do not match.');
+				if(!terms) return showError('You must agree to the terms to continue.');
+
+				// Demo success — in a real app we'd POST to a server here
+				showError('');
+				alert('Registration successful (demo) — check console for form data.');
+				console.log('Form data (demo):', {fullname,email,mobile,password});
+				form.reset();
+			});
+		</script>
+	</body>
+</html>
+
