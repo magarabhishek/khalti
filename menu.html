@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Restaurant Menu Demo</title>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="menu-styles.css">
+	</head>
+	<body>
+		<main class="card menu-card" role="main">
+			<div class="header">
+				<div>
+					<span class="eyebrow">Chef's Menu</span>
+					<h1>Vivid Bistro</h1>
+				</div>
+				<div class="meta">
+					<strong>Open now</strong><br>
+					Mon — Sun · 11:00 AM — 10:00 PM<br>
+					<br>
+					<strong>📍 Location</strong><br>
+					123 Culinary Street<br>
+					Manhattan, New York<br>
+					United States
+				</div>
+			</div>
+
+			<p class="lead">Browse a curated restaurant menu with starters, mains, desserts, and drinks crafted for a fresh dining experience.</p>
+
+			<nav class="menu-nav" aria-label="Menu categories">
+				<a href="#starters">Starters</a>
+				<a href="#mains">Mains</a>
+				<a href="#desserts">Desserts</a>
+				<a href="#drinks">Drinks</a>
+			</nav>
+
+			<section id="starters" class="menu-section">
+				<h2>Starters</h2>
+				<div class="menu-grid">
+					<article class="menu-item">
+						<img src="https://placehold.co/360x220?text=Truffle+Toast&font=raleway" alt="Truffle Mushroom Toast">
+						<div class="menu-item-content">
+							<h3>Truffle Mushroom Toast</h3>
+							<p>Grilled sourdough topped with creamy ricotta, wild mushrooms, and black truffle oil.</p>
+							<div class="details"><span class="price">$12</span><span class="tag">Vegetarian</span></div>
+						</div>
+					</article>
+					<article class="menu-item">
+						<img src="https://placehold.co/360x220?text=Spiced+Calamari&font=raleway" alt="Spiced Calamari">
+						<div class="menu-item-content">
+							<h3>Spiced Calamari</h3>
+							<p>Crispy calamari rings with lemon aioli, smoked paprika, and fresh herbs.</p>
+							<div class="details"><span class="price">$14</span><span class="tag">Seafood</span></div>
+						</div>
+					</article>
+					<article class="menu-item">
+						<img src="https://placehold.co/360x220?text=Garden+Salad&font=raleway" alt="Garden Salad Bowl">
+						<div class="menu-item-content">
+							<h3>Garden Salad Bowl</h3>
+							<p>Mixed greens, heirloom tomatoes, cucumbers, and goat cheese with citrus vinaigrette.</p>
+							<div class="details"><span class="price">$10</span><span class="tag">Gluten-Free</span></div>
+						</div>
+					</article>
+				</div>
+			</section>
+
+			<section id="mains" class="menu-section">
+				<h2>Mains</h2>
+				<div class="menu-grid">
+					<article class="menu-item">
+						<img src="https://placehold.co/360x220?text=Roasted+Chicken&font=raleway" alt="Herb Roasted Chicken">
+						<div class="menu-item-content">
+							<h3>Herb Roasted Chicken</h3>
+							<p>Half chicken roasted with rosemary, garlic, and lemon served with rosemary potatoes.</p>
+							<div class="details"><span class="price">$22</span><span class="tag">House Favorite</span></div>
+						</div>
+					</article>
+					<article class="menu-item">
+						<img src="https://placehold.co/360x220?text=Seared+Salmon&font=raleway" alt="Seared Salmon">
+						<div class="menu-item-content">
+							<h3>Seared Salmon</h3>
+							<p>Pan-seared salmon with honey-mustard glaze, wilted spinach, and wild rice pilaf.</p>
+							<div class="details"><span class="price">$24</span><span class="tag">Omega-3</span></div>
+						</div>
+					</article>
+					<article class="menu-item">
+						<img src="https://placehold.co/360x220?text=Ravioli+Primavera&font=raleway" alt="Ravioli Primavera">
+						<div class="menu-item-content">
+							<h3>Ravioli Primavera</h3>
+							<p>House-made ricotta ravioli tossed with zucchini, cherry tomatoes, and basil cream sauce.</p>
+							<div class="details"><span class="price">$20</span><span class="tag">Vegetarian</span></div>
+						</div>
+					</article>
+				</div>
+			</section>
+
+			<section id="desserts" class="menu-section">
+				<h2>Desserts</h2>
+				<div class="menu-grid">
+					<article class="menu-item">
+						<img src="https://placehold.co/360x220?text=Caramel+Tart&font=raleway" alt="Salted Caramel Tart">
+						<div class="menu-item-content">
+							<h3>Salted Caramel Tart</h3>
+							<p>Buttery pastry filled with caramel custard and topped with smoked sea salt.</p>
+							<div class="details"><span class="price">$9</span><span class="tag">Sweet</span></div>
+						</div>
+					</article>
+					<article class="menu-item">
+						<img src="https://placehold.co/360x220?text=Chocolate+Fondant&font=raleway" alt="Chocolate Fondant">
+						<div class="menu-item-content">
+							<h3>Chocolate Fondant</h3>
+							<p>Warm chocolate cake with molten center, served with vanilla ice cream.</p>
+							<div class="details"><span class="price">$11</span><span class="tag">Decadent</span></div>
+						</div>
+					</article>
+					<article class="menu-item">
+						<img src="https://placehold.co/360x220?text=Mango+Panna+Cotta&font=raleway" alt="Mango Panna Cotta">
+						<div class="menu-item-content">
+							<h3>Mango Panna Cotta</h3>
+							<p>Silky panna cotta topped with fresh mango coulis and mint.</p>
+							<div class="details"><span class="price">$8</span><span class="tag">Light</span></div>
+						</div>
+					</article>
+				</div>
+			</section>
+
+			<section id="drinks" class="menu-section">
+				<h2>Drinks</h2>
+				<div class="menu-grid">
+					<article class="menu-item">
+						<img src="https://placehold.co/360x220?text=Old+Fashioned&font=raleway" alt="Classic Old Fashioned">
+						<div class="menu-item-content">
+							<h3>Classic Old Fashioned</h3>
+							<p>Bourbon, bitters, brown sugar, and orange zest served over ice.</p>
+							<div class="details"><span class="price">$13</span><span class="tag">Cocktail</span></div>
+						</div>
+					</article>
+					<article class="menu-item">
+						<img src="https://placehold.co/360x220?text=Lavender+Lemonade&font=raleway" alt="Lavender Lemonade">
+						<div class="menu-item-content">
+							<h3>Lavender Lemonade</h3>
+							<p>Sparkling lemonade infused with lavender and fresh lemon slices.</p>
+							<div class="details"><span class="price">$6</span><span class="tag">Non-Alcoholic</span></div>
+						</div>
+					</article>
+					<article class="menu-item">
+						<img src="https://placehold.co/360x220?text=Espresso+Martini&font=raleway" alt="Espresso Martini">
+						<div class="menu-item-content">
+							<h3>Espresso Martini</h3>
+							<p>Vodka, espresso, coffee liqueur, and vanilla syrup shaken to perfection.</p>
+							<div class="details"><span class="price">$14</span><span class="tag">After Dinner</span></div>
+						</div>
+					</article>
+				</div>
+			</section>
+
+			<section class="payment-section">
+				<h2>Payment Methods</h2>
+				<div class="payment-methods">
+					<div class="payment-item">
+						<div class="payment-badge visa">Visa</div>
+						<p>Credit/Debit Card</p>
+					</div>
+					<div class="payment-item">
+						<div class="payment-badge mastercard">Mastercard</div>
+						<p>Credit/Debit Card</p>
+					</div>
+					<div class="payment-item">
+						<div class="payment-badge paypal">PayPal</div>
+						<p>Digital Wallet</p>
+					</div>
+					<div class="payment-item">
+						<div class="payment-badge apple">Apple Pay</div>
+						<p>Mobile Payment</p>
+					</div>
+					<div class="payment-item">
+						<div class="payment-badge google">Google Pay</div>
+						<p>Mobile Payment</p>
+					</div>
+					<div class="payment-item">
+						<div class="payment-badge cash">Cash</div>
+						<p>On Delivery</p>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
